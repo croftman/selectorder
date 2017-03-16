@@ -1,0 +1,27 @@
+.input-group-addon, .input-group-btn {
+    vertical-align: top;
+}
+
+.select-order {
+	width: 100%;
+	display: block;
+	height: auto;
+	padding: 5px 0px;
+	border: 1px solid #ccd0d4;
+	background-color: white;
+
+}
+
+.select-order li {
+	list-style-type: none;
+	padding: 3px 10px;
+	display: inline-block;
+	width: 100%;
+}
+.select-order li:hover {
+	cursor: pointer;
+}
+.select-order li.active {
+	background-color: #348FE2;
+	color: white;
+}
