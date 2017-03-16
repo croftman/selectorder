@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="selectorder.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="selectorder.js"></script>
+</head>
+<body>
+<form class="form-horizontal col-sm-6" role="form">
+    <div class="form-group">
+        <label for="listitems" class="col-sm-4 control-label">Liste</label>
+        <div class="col-sm-6 input-group">
+            <select class="form-control" name="listitems" id="listitems">
+              <option value="1">Item 1</option>
+              <option value="2">Item 2</option>
+              <option value="3">Item 3</option>
+              <option value="4">Item 4</option>
+              <option value="5">Item 5</option>
+            </select>
+            <div class="input-group-btn">
+                <button class="btn btn-default ttipT" type="button" onclick="alert($('#listitems').val())" title="Edit">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+                <button class="btn btn-default ttipT" type="button" onclick="" title="Delete">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+                <button class="btn btn-default ttipT" type="button" onclick="" title="Add">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+  
+  <script>
+    $(function() {
+      // call
+      $('#listitems').selectOrder({
+        url: '/ajax/items/',
+        extraParams: { action: 'updateItems' }
+      });
+    });
+    
+  </script>
+</html>
